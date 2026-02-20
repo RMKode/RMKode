@@ -22,9 +22,10 @@ We prioritize clean architecture, long-term maintainability, and performance-dri
 
 - React
 - TypeScript
+- Java
 - Spring Boot
 - Node.js
-- PostgreSQL
+- MySQL
 - Tailwind CSS
 
 <p align="center">
