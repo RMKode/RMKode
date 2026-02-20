@@ -3,10 +3,50 @@
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#0f172a"/>
       <stop offset="100%" stop-color="#1e293b"/>
+      <animate attributeName="x2" values="0%;100%;0%" dur="10s" repeatCount="indefinite"/>
     </linearGradient>
+    <style>
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+      }
+      .animated-icon {
+        animation: pulse 2s infinite;
+      }
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+      .star {
+        animation: float 3s ease-in-out infinite;
+      }
+    </style>
   </defs>
 
   <rect width="1200" height="220" fill="url(#bg)" />
+
+  <!-- Animated Stars -->
+  <circle cx="200" cy="50" r="3" fill="#ffd700" class="star"/>
+  <circle cx="400" cy="30" r="2" fill="#ffd700" class="star" style="animation-delay: 1s;"/>
+  <circle cx="600" cy="60" r="4" fill="#ffd700" class="star" style="animation-delay: 2s;"/>
+  <circle cx="800" cy="40" r="2" fill="#ffd700" class="star" style="animation-delay: 0.5s;"/>
+  <circle cx="1000" cy="70" r="3" fill="#ffd700" class="star" style="animation-delay: 1.5s;"/>
+
+  <!-- Floating Code Icons -->
+  <text x="250" y="150" font-family="monospace" font-size="16" fill="#61dafb" class="star" style="animation-delay: 0.8s;">&lt;/&gt;</text>
+  <text x="350" y="160" font-family="monospace" font-size="14" fill="#3178c6" class="star" style="animation-delay: 1.2s;">{ }</text>
+  <text x="450" y="140" font-family="monospace" font-size="18" fill="#6db33f" class="star" style="animation-delay: 0.3s;">&lt;Spring&gt;</text>
+  <text x="550" y="170" font-family="monospace" font-size="15" fill="#339933" class="star" style="animation-delay: 1.8s;">function()</text>
+  <text x="650" y="155" font-family="monospace" font-size="16" fill="#336791" class="star" style="animation-delay: 0.6s;">SELECT *</text>
+  <text x="750" y="165" font-family="monospace" font-size="14" fill="#06b6d4" class="star" style="animation-delay: 1.4s;">className</text>
+
+  <!-- Animated Icon -->
+  <circle cx="150" cy="110" r="30" fill="#3b82f6" class="animated-icon">
+    <animate attributeName="r" values="30;35;30" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="150" y="120" text-anchor="middle" font-family="Arial" font-size="20" fill="white">⚡</text>
 
   <text x="50%" y="50%"
         dominant-baseline="middle"
@@ -19,5 +59,10 @@
              values="0.5;1;0.5"
              dur="3.5s"
              repeatCount="indefinite"/>
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      values="0,0;5,0;0,0;-5,0;0,0"
+                      dur="4s"
+                      repeatCount="indefinite"/>
   </text>
 </svg>

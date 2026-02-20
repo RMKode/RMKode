@@ -27,11 +27,9 @@ We prioritize clean architecture, long-term maintainability, and performance-dri
 - PostgreSQL
 - Tailwind CSS
 
----
-
-## Current Focus
-
-- Fanverse Platform (Full-stack ecosystem)
+<p align="center">
+  <img src="assets/stack.svg" width="100%" alt="Animated Tech Stack">
+</p>
 
 ---
 
@@ -44,6 +42,16 @@ We prioritize clean architecture, long-term maintainability, and performance-dri
 
 ---
 
+## Featured Projects
+
+- Project Alpha: Scalable web platform using React and Node.js
+- Project Beta: Backend API with Spring Boot and PostgreSQL
+- Project Gamma: Mobile-first application with TypeScript
+
+---
+
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=RMKode&show_icons=true&theme=transparent&hide_border=true" />
+  <img src="https://img.shields.io/github/stars/RMKode/RMKode?style=for-the-badge&logo=github&color=blue" alt="GitHub Stars">
+  <img src="https://img.shields.io/github/forks/RMKode/RMKode?style=for-the-badge&logo=github&color=green" alt="GitHub Forks">
+  <img src="https://img.shields.io/github/watchers/RMKode/RMKode?style=for-the-badge&logo=github&color=yellow" alt="GitHub Watchers">
 </p>
