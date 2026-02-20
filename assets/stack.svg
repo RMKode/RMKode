@@ -1,77 +1,113 @@
 <svg width="100%" height="150" viewBox="0 0 800 150" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
-      .icon {
-        animation: bounce 2s infinite;
+      /* Textos Gerais */
+      text {
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        fill: white;
+        text-anchor: middle;
+      }
+      .icon-text {
+        font-weight: bold;
+      }
+      
+      /* Animação suave de Pulo (Geral) */
+      .icon-group {
+        animation: bounce 2s infinite ease-in-out;
       }
       @keyframes bounce {
-        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-        40% { transform: translateY(-10px); }
-        60% { transform: translateY(-5px); }
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
       }
-      .glow {
-        animation: glow 3s ease-in-out infinite alternate;
+      
+      /* Animações Específicas */
+      .react-core-glow { animation: react-glow 2s ease-in-out infinite alternate; }
+      @keyframes react-glow {
+        from { filter: drop-shadow(0 0 2px #61dafb); opacity: 0.8; }
+        to { filter: drop-shadow(0 0 10px #61dafb); opacity: 1; }
       }
-      @keyframes glow {
-        from { filter: drop-shadow(0 0 5px #61dafb); }
-        to { filter: drop-shadow(0 0 20px #61dafb); }
+      .react-orbits-spin {
+        animation: spin-slow 10s linear infinite;
+        transform-origin: 0px 70px;
       }
-      .spin {
-        animation: spin 4s linear infinite;
-      }
-      @keyframes spin {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-      }
-      .pulse {
-        animation: pulse 2s infinite;
-      }
-      @keyframes pulse {
-        0% { opacity: 1; }
-        50% { opacity: 0.5; }
-        100% { opacity: 1; }
+      @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      
+      .steam { animation: steam-rise 2s infinite ease-in-out; }
+      @keyframes steam-rise {
+        0%, 100% { transform: translateY(0); opacity: 0.2; }
+        50% { transform: translateY(-8px); opacity: 0.8; }
       }
     </style>
   </defs>
 
-  <!-- React - Atom -->
-  <circle cx="100" cy="75" r="8" fill="#61dafb" class="glow"/>
-  <circle cx="100" cy="75" r="20" fill="none" stroke="#61dafb" stroke-width="2" class="spin"/>
-  <circle cx="120" cy="75" r="3" fill="#61dafb" class="pulse"/>
-  <circle cx="80" cy="75" r="3" fill="#61dafb" class="pulse" style="animation-delay: 0.5s;"/>
-  <circle cx="100" cy="95" r="3" fill="#61dafb" class="pulse" style="animation-delay: 1s;"/>
-  <circle cx="100" cy="55" r="3" fill="#61dafb" class="pulse" style="animation-delay: 1.5s;"/>
-  <text x="100" y="125" text-anchor="middle" font-family="Arial" font-size="12" fill="white">React</text>
+  <rect width="100%" height="100%" fill="#1e1e1e" rx="8"/>
 
-  <!-- TypeScript - TS Logo -->
-  <rect x="175" y="50" width="50" height="50" fill="#3178c6" class="icon"/>
-  <text x="200" y="75" text-anchor="middle" font-family="Arial" font-size="20" fill="white" font-weight="bold">TS</text>
-  <text x="200" y="85" text-anchor="middle" font-family="Arial" font-size="12" fill="white">TypeScript</text>
+  <g transform="translate(100, 0)">
+    <g class="icon-group">
+      <circle cx="0" cy="70" r="7" fill="#61dafb" class="react-core-glow"/>
+      <g class="react-orbits-spin">
+        <ellipse cx="0" cy="70" rx="28" ry="10" fill="none" stroke="#61dafb" stroke-width="2.5"/>
+        <ellipse cx="0" cy="70" rx="28" ry="10" fill="none" stroke="#61dafb" stroke-width="2.5" transform="rotate(60 0 70)"/>
+        <ellipse cx="0" cy="70" rx="28" ry="10" fill="none" stroke="#61dafb" stroke-width="2.5" transform="rotate(120 0 70)"/>
+      </g>
+    </g>
+    <text x="0" y="130" class="icon-text">React</text>
+  </g>
 
-  <!-- Spring Boot - Leaf -->
-  <path d="M285 55 Q300 40 315 55 Q330 70 315 85 Q300 100 285 85 Q270 70 285 55" fill="#6db33f" class="icon"/>
-  <circle cx="300" cy="70" r="5" fill="#fff"/>
-  <text x="300" y="125" text-anchor="middle" font-family="Arial" font-size="12" fill="white">Spring Boot</text>
+  <g transform="translate(200, 0)">
+    <g class="icon-group">
+      <rect x="-25" y="45" width="50" height="50" fill="#3178c6" rx="6"/>
+      <text x="0" y="78" font-size="22px" font-weight="bold">TS</text>
+    </g>
+    <text x="0" y="130" class="icon-text">TypeScript</text>
+  </g>
 
-  <!-- Node.js - Hexagon -->
-  <polygon points="400,50 425,62.5 425,87.5 400,100 375,87.5 375,62.5" fill="#339933" class="icon"/>
-  <text x="400" y="75" text-anchor="middle" font-family="Arial" font-size="16" fill="white" font-weight="bold">JS</text>
-  <text x="400" y="125" text-anchor="middle" font-family="Arial" font-size="12" fill="white">Node.js</text>
+  <g transform="translate(300, 0)">
+    <g class="icon-group">
+      <path d="M -22 50 L -22 75 Q -22 92 0 92 Q 22 92 22 75 L 22 50 Z" fill="#5382a1"/>
+      <path d="M 22 55 Q 38 55 38 72 Q 38 85 22 85" fill="none" stroke="#5382a1" stroke-width="6"/>
+      <g fill="none" stroke="#f89820" stroke-width="3" stroke-linecap="round">
+        <path d="M -10 40 Q -5 32 -10 24" class="steam"/>
+        <path d="M 0 42 Q 5 34 0 26" class="steam" style="animation-delay: 0.3s"/>
+        <path d="M 10 40 Q 15 32 10 24" class="steam" style="animation-delay: 0.6s"/>
+      </g>
+    </g>
+    <text x="0" y="130" class="icon-text">Java</text>
+  </g>
 
-  <!-- PostgreSQL - Elephant -->
-  <ellipse cx="500" cy="75" rx="25" ry="15" fill="#336791" class="icon"/>
-  <ellipse cx="485" cy="65" rx="5" ry="8" fill="#336791"/>
-  <ellipse cx="515" cy="65" rx="5" ry="8" fill="#336791"/>
-  <circle cx="500" cy="80" r="3" fill="#fff"/>
-  <text x="500" y="125" text-anchor="middle" font-family="Arial" font-size="12" fill="white">PostgreSQL</text>
+  <g transform="translate(400, 0)">
+    <g class="icon-group">
+      <path d="M22,45 C22,45 18,72 0,88 C-18,72 -22,48 -10,38 C-2,30 22,45 22,45 Z" fill="#6db33f"/>
+      <path d="M0,88 C5,70 15,55 22,45" fill="none" stroke="#1e1e1e" stroke-width="3"/>
+      <circle cx="-5" cy="55" r="3" fill="#fff" opacity="0.3"/>
+    </g>
+    <text x="0" y="130" class="icon-text">Spring Boot</text>
+  </g>
 
-  <!-- Tailwind - Wind -->
-  <path d="M575 75 Q585 65 595 75 Q605 85 595 95 Q585 105 575 95 Q565 85 575 75" fill="#06b6d4" class="icon"/>
-  <path d="M595 75 Q605 65 615 75 Q625 85 615 95 Q605 105 595 95 Q585 85 595 75" fill="#06b6d4" class="icon" style="animation-delay: 0.5s;"/>
-  <text x="600" y="125" text-anchor="middle" font-family="Arial" font-size="12" fill="white">Tailwind</text>
+  <g transform="translate(500, 0)">
+    <g class="icon-group">
+      <polygon points="0,45 25,58 25,84 0,97 -25,84 -25,58" fill="#339933"/>
+      <text x="0" y="76" font-size="18px" font-weight="bold">JS</text>
+    </g>
+    <text x="0" y="130" class="icon-text">Node.js</text>
+  </g>
 
-  <!-- Background animation -->
-  <rect width="800" height="150" fill="none">
-    <animate attributeName="opacity" values="0.1;0.3;0.1" dur="5s" repeatCount="indefinite"/>
-  </rect>
+  <g transform="translate(600, 0)">
+    <g class="icon-group">
+      <path d="M -22 50 L -22 80 A 22 7 0 0 0 22 80 L 22 50 Z" fill="#00758f"/>
+      <path d="M -22 60 A 22 7 0 0 0 22 60" fill="none" stroke="#1e1e1e" stroke-width="2.5"/>
+      <path d="M -22 70 A 22 7 0 0 0 22 70" fill="none" stroke="#1e1e1e" stroke-width="2.5"/>
+      <ellipse cx="0" cy="50" rx="22" ry="7" fill="#e47911"/>
+    </g>
+    <text x="0" y="130" class="icon-text">MySQL</text>
+  </g>
+
+  <g transform="translate(700, 0)">
+    <g class="icon-group">
+      <path d="M -27,62 C -27,47 -12,47 -2,57 C 3,62 13,62 18,52 C 13,67 -2,67 -12,57 C -17,52 -27,52 -27,62 Z" fill="#38bdf8"/>
+      <path d="M -17,75 C -17,60 -2,60 8,70 C 13,75 23,75 28,65 C 23,80 8,80 -2,70 C -7,65 -17,65 -17,75 Z" fill="#0ea5e9"/>
+    </g>
+    <text x="0" y="130" class="icon-text">Tailwind</text>
+  </g>
 </svg>
