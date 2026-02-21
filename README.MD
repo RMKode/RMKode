@@ -1,50 +1,9 @@
-<h1 align="center">RMKode</h1>
-
 <p align="center">
-  <img src="assets/banner.svg" width="100%">
+  <img src="assets/banner.svg?v=1" width="100%" alt="RMKode Profile Banner">
 </p>
 
 <p align="center">
-  Engineering scalable digital platforms.
-</p>
-
----
-
-## About
-
-RMKode is a technology startup focused on building scalable, high-performance digital platforms using modern full-stack technologies.
-
-We prioritize clean architecture, long-term maintainability, and performance-driven development.
-
----
-
-## Core Stack
-
-- React
-- TypeScript
-- Java
-- Spring Boot
-- Node.js
-- MySQL
-- Tailwind CSS
-
-<p align="center">
-  <img src="assets/stack.svg" width="100%" alt="Animated Tech Stack">
-</p>
-
----
-
-## Engineering Principles
-
-- Modular architecture
-- Strong typing and code quality
-- Scalable backend infrastructure
-- Performance-oriented frontend development
-
----
-
-<p align="center">
-  <img src="https://img.shields.io/github/stars/RMKode/RMKode?style=for-the-badge&logo=github&color=blue" alt="GitHub Stars">
-  <img src="https://img.shields.io/github/forks/RMKode/RMKode?style=for-the-badge&logo=github&color=green" alt="GitHub Forks">
-  <img src="https://img.shields.io/github/watchers/RMKode/RMKode?style=for-the-badge&logo=github&color=yellow" alt="GitHub Watchers">
+  <img src="https://img.shields.io/github/stars/RMKode/RMKode?style=for-the-badge&logo=github&color=007ec6" alt="GitHub Stars">
+  <img src="https://img.shields.io/github/forks/RMKode/RMKode?style=for-the-badge&logo=github&color=97ca00" alt="GitHub Forks">
+  <img src="https://img.shields.io/github/watchers/RMKode/RMKode?style=for-the-badge&logo=github&color=dfb317" alt="GitHub Watchers">
 </p>
