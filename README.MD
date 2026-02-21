@@ -43,14 +43,6 @@ We prioritize clean architecture, long-term maintainability, and performance-dri
 
 ---
 
-## Featured Projects
-
-- Project Alpha: Scalable web platform using React and Node.js
-- Project Beta: Backend API with Spring Boot and PostgreSQL
-- Project Gamma: Mobile-first application with TypeScript
-
----
-
 <p align="center">
   <img src="https://img.shields.io/github/stars/RMKode/RMKode?style=for-the-badge&logo=github&color=blue" alt="GitHub Stars">
   <img src="https://img.shields.io/github/forks/RMKode/RMKode?style=for-the-badge&logo=github&color=green" alt="GitHub Forks">
